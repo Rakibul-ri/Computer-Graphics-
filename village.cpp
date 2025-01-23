@@ -4,9 +4,6 @@
 void drawHouse() {
     glClear(GL_COLOR_BUFFER_BIT);
 
-    // Set color to light green using glColor3f
-
-
     //river
     glColor3f(0.0f, 0.5f, 1.0f);
     glBegin(GL_POLYGON);
@@ -35,9 +32,8 @@ void drawHouse() {
         float y = sunRadius * sin(angle);
         glVertex2f(sunX + x, sunY + y);
     }
-
-    
     glEnd();
+
     //mountain 1
     glColor3f(0.5f, 0.5f, 0.5f);
     glBegin(GL_TRIANGLES);
@@ -82,8 +78,14 @@ void drawHouse() {
 
 
 
-
-    // house full
+    // house top/sad
+    glColor3f(0.6f, 0.3f, 0.0f);
+    glBegin(GL_TRIANGLES);
+    glVertex2f(0.0f, 2.0f);
+    glVertex2f(-10.0f, 2.0f);
+    glVertex2f(-5.0f, 6.0f);
+    glEnd();
+    // house Body
     glColor3f(0.85f, 0.65f, 0.13f);
     glBegin(GL_POLYGON);
     glVertex2f(-9.0f, 2.0f);
@@ -91,15 +93,6 @@ void drawHouse() {
     glVertex2f(-1.0f, -3.0f);
     glVertex2f(-9.0f, -3.0f);
     glEnd();
-
-    // tringle home
-    glColor3f(0.6f, 0.3f, 0.0f);
-    glBegin(GL_TRIANGLES);
-    glVertex2f(0.0f, 2.0f);
-    glVertex2f(-10.0f, 2.0f);
-    glVertex2f(-5.0f, 6.0f);
-    glEnd();
-
     // dorja
     glColor3f(0.95f, 0.95f, 0.95f);
     glBegin(GL_POLYGON);
@@ -108,7 +101,6 @@ void drawHouse() {
     glVertex2f(-4.0f, -3.0f);
     glVertex2f(-4.0f, 0.0f);
     glEnd();
-
     //janala
     glColor3f(0.80f, 0.80f, 0.80f);
     glBegin(GL_POLYGON);
@@ -117,18 +109,14 @@ void drawHouse() {
     glVertex2f(-7.0f, -2.0f);
     glVertex2f(-7.0f, 0.0f);
     glEnd();
-
     //janala
     glColor3f(0.80f, 0.80f, 0.80f);
-
     glBegin(GL_POLYGON);
     glVertex2f(-3.0f, 0.0f);
     glVertex2f(-1.5f, 0.0f);
     glVertex2f(-1.5f, -2.0f);
     glVertex2f(-3.0f, -2.0f);
     glEnd();
-
-
 
 
 
